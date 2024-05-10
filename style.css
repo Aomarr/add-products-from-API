@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Glory", sans-serif;
+  font-weight: 700;
+}
+body {
+  padding: 50px 20px;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1236px;
+  margin: auto;
+}
+.header {
+  margin-bottom: 50px;
+}
+h1 {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 89.95px;
+}
+h1::after {
+  content: "";
+  width: 100px;
+  height: 6px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+  border-radius: 60px;
+}
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+}
+.card {
+  border: 1px solid #32323232;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.image {
+  display: flex;
+  border: 1px solid #32323232;
+  width: 100%;
+  aspect-ratio: 276 / 184;
+  border-radius: 6px;
+  overflow: auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-position: center;
+  object-fit: fill;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 12px;
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+.title {
+  font-size: 22px;
+  line-height: 22px;
+  color: #323232;
+}
+.description {
+  color: #32323296;
+  font-size: 20px;
+}
+.current-price {
+  font-size: 22px;
+  color: #28a745;
+}
+.old-price {
+  font-size: 18px;
+  color: #dc3545;
+}
+.actions {
+  display: flex;
+  gap: 6px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 13px;
+  flex-grow: 1;
+  border-radius: 0px 0px 6px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.add:active {
+  background-color: #ffffff;
+  color: #007bff;
+}
+.cart-icon {
+  width: 24px;
+  display: flex;
+}
+.fav {
+  width: 50px;
+  border: 2px solid #007bff;
+  border-radius: 0px 0px 6px 0px;
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fav:active {
+  border-color: #ffffff;
+}
+.fav-icon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 770px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 430px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 380px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
